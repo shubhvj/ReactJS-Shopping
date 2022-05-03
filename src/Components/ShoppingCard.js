@@ -2,16 +2,14 @@ import { useState } from "react";
 import "./ShoppingCard.css";
 
 export default function ShoppingCard(props) {
-
   const shoppingData = props.shoppingData;
   const [shoppingCardData, setShoppingCard] = useState(shoppingData);
 
   const deleteShoppingCard = (key) => {
-    setShoppingCard(
-      shoppingCardData.filter((_, index) => {
-        return index !== parseInt(key);
-      })
-    );
+    const filterData = shoppingCardData.filter((_, index) => {
+      return index !== parseInt(key);
+    });
+    setShoppingCard(filterData);
   };
 
   return shoppingCardData.map((product, key) => {
