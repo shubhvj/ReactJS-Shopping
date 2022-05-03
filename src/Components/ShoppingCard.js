@@ -6,10 +6,10 @@ export default function ShoppingCard(props) {
   const shoppingData = props.shoppingData;
   const [shoppingCardData, setShoppingCard] = useState(shoppingData);
 
-  const deleteShoppingCard = (event) => {
+  const deleteShoppingCard = (key) => {
     setShoppingCard(
       shoppingCardData.filter((_, index) => {
-        return index !== parseInt(event.target.parentElement.id);
+        return index !== parseInt(key);
       })
     );
   };
@@ -18,7 +18,7 @@ export default function ShoppingCard(props) {
     return (
       <div className="card-container" key={key} id={key}>
         <img src={require("../assets/image.png")} alt="" />
-        <span className="close-button" onClick={deleteShoppingCard}>
+        <span className="close-button" onClick={() => deleteShoppingCard(key)}>
           X
         </span>
         <h3>{product.title}</h3>
