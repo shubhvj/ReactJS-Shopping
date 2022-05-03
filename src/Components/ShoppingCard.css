@@ -1,0 +1,49 @@
+.card-container{
+    border: 1px solid whitesmoke;
+    margin: 10px;
+    padding: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.card-container:hover{
+    border-color: burlywood;
+}
+
+.close-button {
+    position: absolute;
+    cursor: pointer;
+    right: 10px;
+}
+
+.close-button:hover {
+    color: rgb(179, 67, 67);
+}
+
+img {
+    width: 100px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    background: none;
+    outline: none;
+    border: none;
+    background-color: beige;
+    color: chocolate;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 5px;
+    width: 100%;
+    margin: 10px 0;
+}
+
+button:hover {
+    background-color: brown;
+    color: burlywood;
+    font-weight: bold;
+}
